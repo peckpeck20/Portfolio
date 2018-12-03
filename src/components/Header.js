@@ -114,12 +114,11 @@ class Header extends Component {
             "retina_detect": true
           }}
         />
-              <div className="header-img">
+        <div className="header-img">
+          <img src="https://i.imgur.com/PtYf4.png" width="200" height="200" alt="Italian Trulli"></img>
 
-      <img src="https://i.imgur.com/PtYf4.png" width="200" height="200" alt="Italian Trulli"></img>
-
-            <p>This is a heading</p>
-      </div>
+          <p>Jose Zapata</p>
+        </div>
 
       </div>
     );
