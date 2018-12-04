@@ -7,16 +7,15 @@ import ShowCase from './components/ShowCase';
 
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { user: 'hello' }
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { user: 'hello' }
+  // }
 
   render() {
     return (
-      <div>
+      <div className='App'>
         <Header />
-
 
         <ShowCase />
 
