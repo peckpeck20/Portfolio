@@ -122,9 +122,7 @@ class Header extends Component {
           params={config}
         />
         <div className="header-img">
-          {/* <img src="https://i.imgur.com/PtYf4.png" width="200" height="200" alt="Italian Trulli"></img> */}
-
-          <img id="profile-img" src={require('../assets/me.jpg')} width="200" height="200" />
+          <img id="profile-img" src={require('../assets/me.jpg')} width="200" height="200" alt="Profile Pic" />
 
           <p>Jose Zapata</p>
         </div>

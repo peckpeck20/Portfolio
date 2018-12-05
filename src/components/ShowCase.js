@@ -7,6 +7,10 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import ProjectCards from './ProjectCards';
+import IphoneIcon from '@material-ui/icons/PhoneIphone';
+import Phonelink from '@material-ui/icons/Phonelink';
+import CodeIcon from '@material-ui/icons/Code';
+import '../App.css';
 
 function TabContainer({ children, dir }) {
   return (
@@ -24,7 +28,8 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    padding: '10px'
+    padding: '10px',
+
     // width: 1000,
   },
 });
@@ -56,9 +61,9 @@ class ShowCase extends React.Component {
             fullWidth
           //for mobile devices use centered
           >
-            <Tab label="Front-End" />
-            <Tab label="Mobile" />
-            <Tab label="Back-End" />
+            <Tab icon={<Phonelink />} label="Front-End" />
+            <Tab icon={<IphoneIcon />} label="Mobile" />
+            <Tab icon={<CodeIcon />} label="Back-End" />
           </Tabs>
         </AppBar>
         <SwipeableViews
@@ -66,9 +71,17 @@ class ShowCase extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><ProjectCards /></TabContainer>
+
+          <TabContainer dir={theme.direction}>
+            <div className='container'>
+              <ProjectCards /><ProjectCards /><ProjectCards />
+              {/* <ProjectCards /><ProjectCards /><ProjectCards /> */}
+            </div>
+
+          </TabContainer>
           <TabContainer dir={theme.direction}>Item Two</TabContainer>
           <TabContainer dir={theme.direction}>Item Three</TabContainer>
+
         </SwipeableViews>
       </div>
     );

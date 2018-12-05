@@ -12,14 +12,15 @@ import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Icon from 'react-icons-kit';
+import { github } from 'react-icons-kit/fa/github';
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    // maxWidth: 400,
+    margin: "15px"
   },
   media: {
     height: 0,
@@ -64,11 +65,6 @@ class ProjectCards extends React.Component {
               R
             </Avatar>
           }
-          action={
-            <IconButton>
-              <MoreVertIcon />
-            </IconButton>
-          }
           title="Shrimp and Chorizo Paella"
           subheader="September 14, 2016"
         />
@@ -84,12 +80,10 @@ class ProjectCards extends React.Component {
           </Typography>
         </CardContent>
         <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
+          <IconButton aria-label="Source Code">
+            <Icon icon={github} size={30} />
           </IconButton>
-          <IconButton aria-label="Share">
-            <ShareIcon />
-          </IconButton>
+
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
@@ -99,6 +93,10 @@ class ProjectCards extends React.Component {
             aria-label="Show more"
           >
             <ExpandMoreIcon />
+          </IconButton>
+
+          <IconButton aria-label="Demo">
+            <ShareIcon />
           </IconButton>
         </CardActions>
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
