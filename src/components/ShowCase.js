@@ -28,9 +28,7 @@ TabContainer.propTypes = {
 const styles = theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    padding: '10px',
-
-    // width: 1000,
+    // padding: '10px',
   },
 });
 
@@ -51,7 +49,7 @@ class ShowCase extends React.Component {
     const { classes, theme } = this.props;
 
     return (
-      <div className={classes.root}>
+      <div className={classes.root} id="showcase-root">
         <AppBar position="static" color="default">
           <Tabs
             value={this.state.value}
@@ -75,7 +73,7 @@ class ShowCase extends React.Component {
           <TabContainer dir={theme.direction}>
             <div className='container'>
               <ProjectCards /><ProjectCards /><ProjectCards />
-              {/* <ProjectCards /><ProjectCards /><ProjectCards /> */}
+              <ProjectCards /><ProjectCards /><ProjectCards />
             </div>
 
           </TabContainer>

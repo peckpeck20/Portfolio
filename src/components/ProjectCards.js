@@ -19,8 +19,8 @@ import { github } from 'react-icons-kit/fa/github';
 
 const styles = theme => ({
   card: {
-    // maxWidth: 400,
-    margin: "15px"
+    maxWidth: 400,
+    // margin: "15px"
   },
   media: {
     height: 0,

@@ -34,5 +34,29 @@
 }
 
 .container {
+  border: 5px solid #ffcc5c;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap : wrap;
 }
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .container {
+    flex-direction: row;
+  }
+  .container > div {
+    margin: 20px;
+  }
+  #showcase-root {
+    padding: 10px;
+  }
+}
+
+.container > div {
+  margin: 10px;
+  }
+  /*flex-grow, flex-shrink, flex-basis */
+
+
