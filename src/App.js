@@ -7,10 +7,6 @@ import ShowCase from './components/ShowCase';
 
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = { user: 'hello' }
-  // }
 
   render() {
     return (

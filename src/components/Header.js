@@ -120,12 +120,13 @@ class Header extends Component {
       <div className="particles-js">
         <Particles
           params={config}
+          style={{ position: "relative" }}
         />
-        <div className="header-img">
-          <img id="profile-img" src={require('../assets/me.jpg')} width="200" height="200" alt="Profile Pic" />
+        {/* <div className="header-img">
+          <img id="profile-img" src={require('../assets/me.jpg')} alt="Profile Pic" />
 
           <p>Jose Zapata</p>
-        </div>
+        </div> */}
 
       </div>
     );

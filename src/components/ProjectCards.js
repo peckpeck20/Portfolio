@@ -1,33 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import classnames from 'classnames';
+
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import red from '@material-ui/core/colors/red';
-import ShareIcon from '@material-ui/icons/Share';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Icon from 'react-icons-kit';
 import { github } from 'react-icons-kit/fa/github';
+import PlayCircleOutline from '@material-ui/icons/PlayCircleOutline';
 
+import '../App.css';
+
+// import classnames from 'classnames';
+// import Collapse from '@material-ui/core/Collapse';
+// import ShareIcon from '@material-ui/icons/Share';
+// import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 const styles = theme => ({
-  card: {
-    maxWidth: 400,
-    // margin: "15px"
-  },
+  // card: {
+  //   maxWidth: 400,
+  //   // margin: "15px"
+  // },
   media: {
     height: 0,
     paddingTop: '56.25%', // 16:9
   },
   actions: {
     display: 'flex',
+    justifyContent: "space-between"
   },
   expand: {
     transform: 'rotate(0deg)',
@@ -58,7 +63,7 @@ class ProjectCards extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
+      <Card className='cards'>
         <CardHeader
           avatar={
             <Avatar aria-label="Recipe" className={classes.avatar}>
@@ -84,7 +89,7 @@ class ProjectCards extends React.Component {
             <Icon icon={github} size={30} />
           </IconButton>
 
-          <IconButton
+          {/* <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
             })}
@@ -93,13 +98,14 @@ class ProjectCards extends React.Component {
             aria-label="Show more"
           >
             <ExpandMoreIcon />
-          </IconButton>
+          </IconButton> */}
 
           <IconButton aria-label="Demo">
-            <ShareIcon />
+            {/* <ShareIcon /> */}
+            <PlayCircleOutline fontSize="large" />
           </IconButton>
         </CardActions>
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+        {/* <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>Method:</Typography>
             <Typography paragraph>
@@ -125,7 +131,7 @@ class ProjectCards extends React.Component {
               Set aside off of the heat to let rest for 10 minutes, and then serve.
             </Typography>
           </CardContent>
-        </Collapse>
+        </Collapse> */}
       </Card>
     );
   }
